@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school_controleur.AdminController">
+   <children>
+      <AnchorPane prefHeight="548.0" prefWidth="224.0" style="-fx-background-color: #546E7A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="bclasse" alignment="BASELINE_RIGHT" layoutY="131.0" mnemonicParsing="false" onAction="#acClasse" opacity="0.63" prefHeight="50.0" prefWidth="224.0" text="Classe" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font name="System Italic" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="betudiant" alignment="BASELINE_RIGHT" layoutY="181.0" mnemonicParsing="false" onAction="#acEtudiant" opacity="0.63" prefHeight="50.0" prefWidth="224.0" text="Etudiant" textFill="#2e0101" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="benseignant" alignment="BASELINE_RIGHT" layoutY="231.0" mnemonicParsing="false" onAction="#acEnseignant" opacity="0.63" prefHeight="50.0" prefWidth="224.0" text="Profil" textFill="#2e0101" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font name="System Italic" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="benseignant1" alignment="BASELINE_RIGHT" layoutY="281.0" mnemonicParsing="false" onAction="#acEnseignant" opacity="0.63" prefHeight="50.0" prefWidth="224.0" text="Planning" textFill="#2e0101">
+               <font>
+                  <Font name="System Italic" size="22.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="-6.0" layoutY="-1.0" opacity="0.6" prefHeight="548.0" prefWidth="64.0" style="-fx-background-color: #F5F5F5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="64.0" layoutX="14.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../school_image/classe.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="64.0" layoutX="14.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../school_image/etudiant.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="64.0" layoutX="14.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../school_image/professeur.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <TabPane layoutX="224.0" prefHeight="517.0" prefWidth="580.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab id="classe" fx:id="tabclasse" text="Classe             ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="-3.0" layoutY="-1.0" prefHeight="295.0" prefWidth="297.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Identifiant" />
+                              <TableColumn prefWidth="90.0" text="Nom" />
+                              <TableColumn prefWidth="131.0" text="Filiere " />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="59.0" layoutY="330.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="131.0" text="Ajouter">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="213.0" layoutY="330.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="138.0" text="Supprimer ">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="383.0" layoutY="330.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="123.0" text="Editer ">
+                           <font>
+                              <Font name="System Italic" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab id="etudiant" fx:id="tabetudiant" text="Etudiant          ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="488.0" prefWidth="573.0">
+                     <children>
+                        <Button layoutX="92.0" layoutY="365.0" mnemonicParsing="false" onAction="#ajoutEtudiant" prefHeight="45.0" prefWidth="103.0" text="Ajouter" />
+                        <Button layoutX="239.0" layoutY="365.0" mnemonicParsing="false" onAction="#suprimerEtudiant" prefHeight="45.0" prefWidth="103.0" text="Suprimer" />
+                        <Button layoutX="394.0" layoutY="365.0" mnemonicParsing="false" onAction="#modiferEtudiant" prefHeight="45.0" prefWidth="103.0" text="Modifier" />
+                        <TableView fx:id="tabEtudiant" editable="true" layoutX="4.0" layoutY="1.0" prefHeight="327.0" prefWidth="580.0" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                           <columns>
+                              <TableColumn fx:id="colidentifiant" prefWidth="75.0" text="Identifiant" />
+                              <TableColumn fx:id="colnom" prefWidth="75.0" text="Nom" />
+                              <TableColumn fx:id="colprenom" prefWidth="75.0" text="Prenom" />
+                              <TableColumn fx:id="coladresse" prefWidth="119.0" text="Adresse                   " />
+                              <TableColumn fx:id="colnumerotel" prefWidth="81.0" text="Numero Tel" />
+                              <TableColumn fx:id="colmail" minWidth="2.0" prefWidth="69.0" text="Mail" />
+                              <TableColumn fx:id="colclasse" prefWidth="84.0" text="Classe" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Planning              ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Profil                  ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
