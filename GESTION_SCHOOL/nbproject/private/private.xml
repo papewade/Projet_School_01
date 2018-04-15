@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_modele/Connection_sch.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_modele/Etablissement.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_vue/AjoutEtudiant.fxml</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_modele/Individu.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_modele/Classe.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_modele/Directeur.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/nbproject/build-impl.xml</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_modele/Etudiant.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_controleur/AjoutController.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_vue/suprimerEtudiant.fxml</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_controleur/FXMLDocumentController.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_modele/Secretaire.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_controleur/SuprimerEtudiantController.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_controleur/AdminController.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_modele/Adresse.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_main/MainFx.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_modele/Enseignant.java</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_vue/directeur.fxml</file>
+            <file>file:/D:/projet_java_fx/GESTION_SCHOOL/src/school_modele/Admin.java</file>
+        </group>
+    </open-files>
+</project-private>

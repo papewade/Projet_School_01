@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="321.0" prefWidth="528.0" style="-fx-background-color: #546E7A;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school_controleur.SuprimerEtudiantController">
+   <children>
+      <Button fx:id="validersup" layoutX="138.0" layoutY="192.0" mnemonicParsing="false" onAction="#validerAjouter" prefHeight="50.0" prefWidth="111.0" text="Valider">
+         <font>
+            <Font name="System Italic" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="annulersup" layoutX="306.0" layoutY="192.0" mnemonicParsing="false" onAction="#annulerAjout" prefHeight="50.0" prefWidth="111.0" text="Annuler">
+         <font>
+            <Font name="System Italic" size="23.0" />
+         </font>
+      </Button>
+      <TextField fx:id="idsup" layoutX="306.0" layoutY="110.0" prefHeight="32.0" prefWidth="71.0" />
+      <Label layoutX="115.0" layoutY="100.0" prefHeight="42.0" prefWidth="157.0" text="Identifiant  : ">
+         <font>
+            <Font name="Garamond Italic" size="33.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.00476190476190471" endY="0.0761904761904762">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>
