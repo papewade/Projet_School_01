@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane accessibleRole="COMBO_BOX" prefHeight="508.0" prefWidth="757.0" style="-fx-background-color: #37474F;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school_controleur.FXMLDocumentController">
+<AnchorPane accessibleRole="COMBO_BOX" prefHeight="508.0" prefWidth="757.0" style="-fx-background-color: #37474F;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school_controleur.FXMLDocumentController">
    <children>
       <ImageView fitHeight="134.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -31,37 +31,37 @@
       </ImageView>
       <Pane layoutX="214.0" layoutY="122.0" prefHeight="318.0" prefWidth="311.0" style="-fx-background-color: #546E7A;" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="232.0" AnchorPane.topAnchor="122.0">
          <children>
-            <Button fx:id="seconnecter" layoutX="89.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleButtonAction1" prefHeight="39.0" prefWidth="134.0" text="Se Connecter">
+            <Button fx:id="seconnecter" layoutX="116.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleButtonAction1" prefHeight="39.0" prefWidth="134.0" text="Se Connecter">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <PasswordField fx:id="motdepasse" layoutX="54.0" layoutY="106.0" prefHeight="42.0" prefWidth="205.0" promptText="mot de passe">
+            <PasswordField fx:id="motdepasse" layoutX="89.0" layoutY="107.0" prefHeight="42.0" prefWidth="205.0" promptText="mot de passe">
                <font>
                   <Font size="18.0" />
                </font>
             </PasswordField>
-            <TextField fx:id="identifiant" layoutX="56.0" layoutY="35.0" prefHeight="42.0" prefWidth="205.0" promptText="identifiant">
+            <TextField fx:id="identifiant" layoutX="89.0" layoutY="36.0" prefHeight="42.0" prefWidth="205.0" promptText="identifiant">
                <font>
                   <Font size="18.0" />
                </font>
             </TextField>
-            <ImageView fitHeight="60.0" fitWidth="41.0" layoutX="6.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="60.0" fitWidth="41.0" layoutX="34.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../school_image/utilisateur.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="49.0" fitWidth="53.0" layoutX="2.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="49.0" fitWidth="53.0" layoutX="30.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../school_image/cle.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="61.0" fitWidth="41.0" layoutX="6.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="61.0" fitWidth="41.0" layoutX="34.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../school_image/selectionner.png" />
                </image>
             </ImageView>
-            <ComboBox fx:id="statut" layoutX="54.0" layoutY="179.0" prefHeight="39.0" prefWidth="205.0" promptText="Selectionner votre statut" />
+            <ComboBox fx:id="statut" layoutX="89.0" layoutY="180.0" prefHeight="39.0" prefWidth="205.0" promptText="Selectionner votre statut" />
          </children>
       </Pane>
    </children>

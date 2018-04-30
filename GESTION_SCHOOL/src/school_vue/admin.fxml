@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school_controleur.AdminController">
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school_controleur.AdminController">
    <children>
       <AnchorPane prefHeight="548.0" prefWidth="224.0" style="-fx-background-color: #546E7A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -83,26 +83,16 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="-3.0" layoutY="-1.0" prefHeight="295.0" prefWidth="297.0">
+                        <TableView fx:id="tabClasse" layoutX="37.0" layoutY="29.0" prefHeight="383.0" prefWidth="506.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="Identifiant" />
-                            <TableColumn prefWidth="90.0" text="Nom" />
-                              <TableColumn prefWidth="131.0" text="Filiere " />
+                            <TableColumn fx:id="colidclasse" prefWidth="118.0" text="Identifiant" />
+                              <TableColumn fx:id="colfiliereclasse" prefWidth="227.0" text="Filière " />
+                            <TableColumn fx:id="colanneeclasse" prefWidth="159.0" text="Année" />
                           </columns>
                         </TableView>
-                        <Button layoutX="59.0" layoutY="330.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="131.0" text="Ajouter">
-                           <font>
-                              <Font size="18.0" />
-                           </font></Button>
-                        <Button layoutX="213.0" layoutY="330.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="138.0" text="Supprimer ">
-                           <font>
-                              <Font name="System Bold Italic" size="18.0" />
-                           </font></Button>
-                        <Button layoutX="383.0" layoutY="330.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="123.0" text="Editer ">
-                           <font>
-                              <Font name="System Italic" size="20.0" />
-                           </font>
-                        </Button>
+                        <Button fx:id="ajouClasse" layoutX="64.0" layoutY="429.0" mnemonicParsing="false" onAction="#ajouterCLasse" prefHeight="45.0" prefWidth="131.0" text="Ajouter" />
+                        <Button fx:id="supClasse" layoutX="221.0" layoutY="429.0" mnemonicParsing="false" onAction="#supprimerClasse" prefHeight="45.0" prefWidth="138.0" text="Supprimer " />
+                        <Button fx:id="actuClasse" layoutX="386.0" layoutY="429.0" mnemonicParsing="false" onAction="#actualiserClasse" prefHeight="45.0" prefWidth="123.0" text="Actualiser " />
                      </children>
                   </AnchorPane>
             </content>
@@ -111,10 +101,10 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="488.0" prefWidth="573.0">
                      <children>
-                        <Button fx:id="bouttonAjout" layoutX="29.0" layoutY="365.0" mnemonicParsing="false" onAction="#ajoutEtudiant" prefHeight="45.0" prefWidth="103.0" text="Ajouter" />
-                        <Button layoutX="274.0" layoutY="365.0" mnemonicParsing="false" onAction="#actualiserTab" prefHeight="45.0" prefWidth="103.0" text="Actualiser" />
-                        <Button layoutX="409.0" layoutY="365.0" mnemonicParsing="false" onAction="#modiferEtudiant" prefHeight="45.0" prefWidth="103.0" text="Modifier" />
-                        <TableView fx:id="tabEtudiant" editable="true" layoutX="4.0" layoutY="1.0" prefHeight="327.0" prefWidth="580.0" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                        <Button fx:id="bouttonAjout" layoutX="50.0" layoutY="410.0" mnemonicParsing="false" onAction="#ajoutEtudiant" prefHeight="45.0" prefWidth="103.0" text="Ajouter" />
+                        <Button fx:id="actualiserEtudiant" layoutX="305.0" layoutY="410.0" mnemonicParsing="false" onAction="#actualiserEtudiant" prefHeight="45.0" prefWidth="103.0" text="Actualiser" />
+                        <Button layoutX="431.0" layoutY="410.0" mnemonicParsing="false" onAction="#modiferEtudiant" prefHeight="45.0" prefWidth="103.0" text="Modifier" />
+                        <TableView fx:id="tabEtudiant" editable="true" layoutX="4.0" layoutY="1.0" prefHeight="388.0" prefWidth="580.0" AnchorPane.bottomAnchor="99.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
                           <columns>
                             <TableColumn fx:id="colidentifiant" prefWidth="75.0" text="Identifiant" />
                             <TableColumn fx:id="colnom" prefWidth="75.0" text="Nom" />
@@ -125,7 +115,7 @@
                               <TableColumn fx:id="colclasse" prefWidth="84.0" text="Classe" />
                           </columns>
                         </TableView>
-                        <Button layoutX="144.0" layoutY="365.0" mnemonicParsing="false" onAction="#suprimerEtudiant" prefHeight="45.0" prefWidth="103.0" text="Suprimer" />
+                        <Button fx:id="suprimEtudiant" layoutX="176.0" layoutY="410.0" mnemonicParsing="false" onAction="#suprimerEtudiant" prefHeight="45.0" prefWidth="103.0" text="Suprimer" />
                      </children></AnchorPane>
             </content>
           </Tab>
@@ -133,7 +123,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="tabEtudiant1" editable="true" prefHeight="327.0" prefWidth="580.0" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="tabEnseignant" editable="true" prefHeight="375.0" prefWidth="580.0" AnchorPane.bottomAnchor="113.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
                               <TableColumn fx:id="colidentifiant1" prefWidth="75.0" text="Identifiant" />
                               <TableColumn fx:id="colnom1" prefWidth="75.0" text="Nom" />
@@ -141,12 +131,12 @@
                               <TableColumn fx:id="coladresse1" prefWidth="121.0" text="Adresse                   " />
                               <TableColumn fx:id="colnumerotel1" prefWidth="79.0" text="Numero Tel" />
                               <TableColumn fx:id="colmail1" minWidth="2.0" prefWidth="69.0" text="Mail" />
-                              <TableColumn fx:id="colclasse1" prefWidth="84.0" text="Specialite" />
+                              <TableColumn fx:id="colspecialite1" prefWidth="84.0" text="Specialite" />
                            </columns>
                         </TableView>
-                        <Button layoutX="95.0" layoutY="382.0" mnemonicParsing="false" onAction="#ajoutEtudiant" prefHeight="45.0" prefWidth="103.0" text="Ajouter" />
-                        <Button layoutX="259.0" layoutY="382.0" mnemonicParsing="false" onAction="#suprimerEtudiant" prefHeight="45.0" prefWidth="103.0" text="Suprimer" />
-                        <Button layoutX="410.0" layoutY="382.0" mnemonicParsing="false" onAction="#modiferEtudiant" prefHeight="45.0" prefWidth="103.0" text="Modifier" />
+                        <Button fx:id="ajoutEnseignant" layoutX="84.0" layoutY="407.0" mnemonicParsing="false" onAction="#ajouterEnseignant" prefHeight="45.0" prefWidth="103.0" text="Ajouter" />
+                        <Button fx:id="suprimEnseignant" layoutX="239.0" layoutY="407.0" mnemonicParsing="false" onAction="#supprimerEnseignant" prefHeight="45.0" prefWidth="103.0" text="Suprimer" />
+                        <Button fx:id="modEnseignant" layoutX="394.0" layoutY="407.0" mnemonicParsing="false" onAction="#modifierEnseignant" prefHeight="45.0" prefWidth="103.0" text="Modifier" />
                      </children></AnchorPane>
               </content>
             </Tab>
@@ -154,33 +144,26 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="tabEtudiant2" editable="true" prefHeight="327.0" prefWidth="580.0" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="tabPersonnel" editable="true" prefHeight="384.0" prefWidth="580.0" AnchorPane.bottomAnchor="104.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
                               <TableColumn fx:id="colidentifiant2" prefWidth="75.0" text="Identifiant" />
                               <TableColumn fx:id="colnom2" prefWidth="75.0" text="Nom" />
                               <TableColumn fx:id="colprenom2" prefWidth="75.0" text="Prenom" />
-                              <TableColumn fx:id="coladresse2" prefWidth="100.0" text="Adresse                   " />
-                              <TableColumn fx:id="colnumerotel2" prefWidth="100.0" text="Numero Tel" />
+                              <TableColumn fx:id="coladresse2" prefWidth="110.0" text="Adresse " />
+                              <TableColumn fx:id="colnumerotel2" prefWidth="90.0" text="Numero Tel" />
                               <TableColumn fx:id="colmail2" minWidth="2.0" prefWidth="69.0" text="Mail" />
-                              <TableColumn fx:id="colclasse2" prefWidth="84.0" text="Fonction" />
+                              <TableColumn fx:id="colfonction2" prefWidth="84.0" text="Fonction" />
                            </columns>
                         </TableView>
-                        <Button layoutX="402.0" layoutY="379.0" mnemonicParsing="false" onAction="#ajoutEtudiant" prefHeight="45.0" prefWidth="103.0" text="Ajouter" />
-                        <Button layoutX="402.0" layoutY="379.0" mnemonicParsing="false" onAction="#suprimerEtudiant" prefHeight="45.0" prefWidth="103.0" text="Suprimer" />
-                        <Button layoutX="402.0" layoutY="379.0" mnemonicParsing="false" onAction="#modiferEtudiant" prefHeight="45.0" prefWidth="103.0" text="Modifier" />
+                        <Button fx:id="modifPersonnel" layoutX="409.0" layoutY="417.0" mnemonicParsing="false" onAction="#modifierPersonnel" prefHeight="45.0" prefWidth="103.0" text="Modifier" />
+                        <Button fx:id="ajourPersonnel" layoutX="60.0" layoutY="417.0" mnemonicParsing="false" onAction="#ajouterPersonnel" prefHeight="45.0" prefWidth="103.0" text="Ajouter" />
+                        <Button fx:id="supPersonnel" layoutX="239.0" layoutY="417.0" mnemonicParsing="false" onAction="#supprimerPersonnel" prefHeight="45.0" prefWidth="103.0" text="Supprimer" />
                      </children></AnchorPane>
               </content>
             </Tab>
             <Tab id="gestionschool" fx:id="tabgestionschool" text="Gestion School  ">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="353.0" fitWidth="538.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="144.241943359375" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="1.0">
-                           <image>
-                              <Image url="@../school_image/a0812b01.jpg" />
-                           </image>
-                        </ImageView>
-                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
         </tabs>
