@@ -17,6 +17,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import school_modele.Connection_sch;
 
 /**
@@ -83,6 +84,8 @@ public class SuprimerEtudiantController implements Initializable {
        
 
     @FXML private void annulerAjout(ActionEvent event) {
+        Stage stage = (Stage) annulersup.getScene().getWindow();
+        stage.close();
     }
     
 }

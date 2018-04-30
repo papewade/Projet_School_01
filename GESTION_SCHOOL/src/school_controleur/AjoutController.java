@@ -16,13 +16,18 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import school_modele.Connection_sch;
+import school_controleur.AdminController;
 
 /**
  * FXML Controller class
@@ -58,13 +63,15 @@ public class AjoutController implements Initializable {
 
 
     
-    @FXML void annulerAjout(ActionEvent event) {
+    @FXML public  void annulerAjout(ActionEvent event) {
+        Stage stage = (Stage) annuler.getScene().getWindow();
+        stage.close();
         
         
-
+        
     }
     @FXML
-    void validerAjouter(ActionEvent event) {
+   public void validerAjouter(ActionEvent event) throws SQLException {
         
         Connection conn = null;
         PreparedStatement ps = null;
@@ -92,6 +99,8 @@ public class AjoutController implements Initializable {
 
                 ps2.executeUpdate();
 
+                new AdminController().leadDatabaseDataEtudiant();
+                
                 ajoutnom.clear();
                 ajoutprenom.clear();
                 ajoutadresse.clear();
@@ -100,15 +109,15 @@ public class AjoutController implements Initializable {
                 ajoutident.clear();
                 ajoutmdp.clear();
                 statut.setValue("Selectionner statut");
-
+                
                 Alert alert = new Alert(AlertType.INFORMATION);
                 alert.setTitle("Notification");
                 alert.setHeaderText(null);
                 alert.setContentText("L'individu a bien été inscrit !");
-
+                
                 alert.showAndWait();
                 
-
+                
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -122,8 +131,9 @@ public class AjoutController implements Initializable {
             alert.showAndWait();
         }
         
-       
 
+        
+        
     }
 
     /**
@@ -132,13 +142,10 @@ public class AjoutController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ObservableList<String> options = FXCollections.observableArrayList(
-            "Administrateur",
-            "Etudiant",
-            "Professeur",
-            "Secretaire",
-            "Directeur"
+            "Etudiant"
         ); 
         statut.setItems(options);
-    }    
+    }
+
     
 }

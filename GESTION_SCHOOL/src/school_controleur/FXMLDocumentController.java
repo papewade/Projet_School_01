@@ -86,7 +86,7 @@ public class FXMLDocumentController implements Initializable {
 			if (rs2.next()) {
 				Node source = (Node) event.getSource();
 				Window theStage = source.getScene().getWindow();
-				theStage.hide();
+				theStage.hide();                                
 
 				switch (nomStatut) {
 
@@ -96,9 +96,11 @@ public class FXMLDocumentController implements Initializable {
 					Stage stage = new Stage();
 					stage.setScene(new Scene(root2));
 					stage.show();
+                                        stage.setResizable(false);
 					System.out.println("Connecté");
 					
 					break;
+					
 
 				case "Etudiant":
 
@@ -106,6 +108,7 @@ public class FXMLDocumentController implements Initializable {
 					Stage stage3 = new Stage();
 					stage3.setScene(new Scene(root3));
 					stage3.show();
+                                        stage3.setResizable(false);
 					System.out.println("Connecté");
 					
 					break;
@@ -116,6 +119,7 @@ public class FXMLDocumentController implements Initializable {
 					Stage stage4 = new Stage();
 					stage4.setScene(new Scene(root4));
 					stage4.show();
+                                        stage4.setResizable(false);
 					System.out.println("Connecté");
 					
 					break;
@@ -126,6 +130,7 @@ public class FXMLDocumentController implements Initializable {
 					Stage stage6 = new Stage();
 					stage6.setScene(new Scene(root6));
 					stage6.show();
+                                        stage6.setResizable(false);
 					System.out.println("Connecté");
 					
 					break;
@@ -133,10 +138,11 @@ public class FXMLDocumentController implements Initializable {
 				case "Professeur":
 
 					Parent root5;
-                                root5 = FXMLLoader.load(getClass().getResource("../school_vue/professeur.fxml"));
+                                        root5 = FXMLLoader.load(getClass().getResource("../school_vue/professeur.fxml"));
 					Stage stage5 = new Stage();
 					stage5.setScene(new Scene(root5));
 					stage5.show();
+                                        stage5.setResizable(false);
 					System.out.println("Connecté");
 					
 					break;
